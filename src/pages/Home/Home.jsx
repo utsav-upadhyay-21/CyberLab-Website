@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { ArrowRight, Shield, Users, Target, Search, Globe, Network, Cloud, Radar, Scale, Building, GraduationCap } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Container, SectionHeading, SectionRule } from "../../components/UI/Section"
 import { Button } from "../../components/UI/Button"
 import { homeContent } from "../../data/home"
@@ -10,9 +10,6 @@ const fadeUp = {
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.4, ease: "easeOut" },
 }
-
-const learningAreaIcons = [Network, Globe, Search, Shield, Radar, Cloud, Target, Scale]
-const partnerIcons = [GraduationCap, Building, Users]
 
 export function Home() {
   return (
@@ -54,16 +51,6 @@ export function Home() {
             </p>
           </motion.div>
 
-          <motion.div {...fadeUp} transition={{ delay: 0.5, duration: 0.4 }} className="flex items-center gap-4">
-            <Link to="/about">
-              <Button>
-                Explore the Lab <ArrowRight size={16} strokeWidth={1.5} />
-              </Button>
-            </Link>
-            <Link to="/events">
-              <Button variant="secondary">View Programs</Button>
-            </Link>
-          </motion.div>
         </Container>
       </section>
 
@@ -133,48 +120,6 @@ export function Home() {
 
       <SectionRule />
 
-      {/* Built Through Collaboration */}
-      <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
-        <div className="absolute inset-0 texture-vertical-light" />
-        <Container className="relative z-10">
-          <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 opacity-60">
-              Built Through Collaboration
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              Three partners, one mission
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {homeContent.partners.map((partner, i) => {
-              const Icon = partnerIcons[i]
-              return (
-                <motion.div
-                  key={partner.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.4 }}
-                  className="border-2 border-background p-8 transition-colors hover:bg-background hover:text-foreground"
-                >
-                  <Icon size={24} strokeWidth={1.5} className="mb-6" />
-                  <p className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
-                    {partner.role}
-                  </p>
-                  <h3 className="font-display text-xl font-bold tracking-tight mb-3">
-                    {partner.name}
-                  </h3>
-                  <p className="text-sm opacity-80">{partner.description}</p>
-                </motion.div>
-              )
-            })}
-          </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
       {/* Why This Lab */}
       <section className="py-24 md:py-32 relative texture-lines">
         <Container>
@@ -211,45 +156,6 @@ export function Home() {
                 )}
               </motion.div>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
-      {/* Cybersecurity Learning Areas */}
-      <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
-        <div className="absolute inset-0 texture-vertical-light" />
-        <Container className="relative z-10">
-          <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 opacity-60">
-              Learning Areas
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              Explore cybersecurity domains
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {homeContent.learningAreas.map((area, i) => {
-              const Icon = learningAreaIcons[i]
-              return (
-                <motion.div
-                  key={area.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05, duration: 0.4 }}
-                  className="border-2 border-background p-6 transition-colors hover:bg-background hover:text-foreground"
-                >
-                  <Icon size={20} strokeWidth={1.5} className="mb-4" />
-                  <h3 className="font-display text-lg font-bold tracking-tight mb-2">
-                    {area.title}
-                  </h3>
-                  <p className="text-sm opacity-80">{area.description}</p>
-                </motion.div>
-              )
-            })}
           </div>
         </Container>
       </section>
@@ -300,33 +206,6 @@ export function Home() {
               <p className="text-muted-foreground">{homeContent.aegis.description2}</p>
             </motion.div>
           </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
-      {/* CTA */}
-      <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
-        <div className="absolute inset-0 texture-vertical-light" />
-        <Container className="relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-          >
-            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-6">
-              {homeContent.cta.title}
-            </h2>
-            <p className="text-lg opacity-60 max-w-xl mx-auto mb-12">
-              {homeContent.cta.description}
-            </p>
-            <Link to="/about">
-              <Button className="bg-background text-foreground hover:bg-foreground hover:text-background border-2 border-background hover:border-foreground">
-                Explore the Lab <ArrowRight size={16} strokeWidth={1.5} />
-              </Button>
-            </Link>
-          </motion.div>
         </Container>
       </section>
     </>

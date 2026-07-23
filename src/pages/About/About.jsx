@@ -77,43 +77,6 @@ export function About() {
 
       <SectionRule />
 
-      {/* Objectives */}
-      <section className="py-24 md:py-32 relative texture-diagonal">
-        <Container>
-          <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
-              Objectives
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              What we aim to achieve
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {aboutContent.objectives.map((objective, i) => (
-              <motion.div
-                key={objective.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="border-2 border-foreground p-6 transition-colors hover:bg-foreground hover:text-background group"
-              >
-                <span className="font-mono text-xs tracking-widest opacity-40 block mb-4">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display text-lg font-bold tracking-tight mb-2">
-                  {objective.title}
-                </h3>
-                <p className="text-sm text-muted-foreground group-hover:text-background/70">{objective.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
       {/* Partners */}
       <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
         <div className="absolute inset-0 texture-vertical-light" />
