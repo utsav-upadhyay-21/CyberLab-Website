@@ -7,11 +7,14 @@ const footerNav = [
     links: [
       { label: "About", to: "/about" },
       { label: "Projects", to: "/projects" },
+      { label: "Current Affairs", to: "/current-affairs" },
     ],
   },
   {
     title: "Community",
     links: [
+      { label: "Events", to: "/events" },
+      { label: "CTF", to: "/ctf" },
       { label: "Team", to: "/team" },
       { label: "Newsletter", to: "/newsletter" },
       { label: "FAQ", to: "/faq" },
@@ -20,6 +23,7 @@ const footerNav = [
   {
     title: "Connect",
     links: [
+      { label: "Join Us", to: "/join" },
       { label: "Contact", to: "/contact" },
       { label: "Feedback", to: "/feedback" },
     ],
@@ -42,7 +46,7 @@ export function Footer() {
               {siteConfig.institution}
             </p>
             <p className="mt-2 text-sm opacity-40">
-              In collaboration with Reinfosec & AEGIS Cybersecurity Club
+              An initiative by AEGIS Cybersecurity Club
             </p>
           </div>
 

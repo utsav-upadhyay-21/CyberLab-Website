@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 
 export function Card({ children, className = "", inverted = false, hover = true }) {
   return (

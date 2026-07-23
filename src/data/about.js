@@ -6,7 +6,7 @@ export const aboutContent = {
     "The RVITM Cybersecurity Lab is designed to provide students with a dedicated environment to explore, learn, and practice cybersecurity beyond the classroom.",
 
   description2:
-    "Established through collaboration between RV Institute of Technology and Management, Reinfosec, and AEGIS Cybersecurity Club, the lab combines academic learning, industry expertise, and student-driven exploration.",
+    "Established through collaboration between RV Institute of Technology and Management and AEGIS Cybersecurity Club, the lab combines academic learning and student-driven exploration.",
 
   description3:
     "Students gain practical exposure to cybersecurity concepts, tools, attack and defence techniques, security assessment methodologies, and emerging technologies through guided labs, workshops, projects, competitions, and industry interactions.",
@@ -24,7 +24,7 @@ export const aboutContent = {
     },
     {
       title: "Industry Exposure",
-      description: "Connect students with cybersecurity professionals and industry practices through Reinfosec-led sessions and mentorship.",
+      description: "Connect students with cybersecurity professionals and industry practices through workshops and mentorship.",
     },
     {
       title: "Security Research",
@@ -54,11 +54,6 @@ export const aboutContent = {
       name: "RV Institute of Technology and Management",
       role: "Academic Institution",
       description: "Providing the academic ecosystem, infrastructure and student community.",
-    },
-    {
-      name: "Reinfosec",
-      role: "Industry Cybersecurity Partner",
-      description: "Providing cybersecurity expertise, industry exposure and professional guidance.",
     },
     {
       name: "AEGIS Cybersecurity Club",

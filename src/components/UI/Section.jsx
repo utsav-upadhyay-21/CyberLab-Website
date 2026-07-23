@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 export function SectionHeading({ eyebrow, title, description, className = "" }) {
   return (
     <div className={`mb-12 md:mb-16 ${className}`}>

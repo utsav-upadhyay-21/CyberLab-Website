@@ -8,4 +8,5 @@ export const siteConfig = {
   linkedin: "https://linkedin.com/company/aegis-rvitm",
   github: "https://github.com/aegis-club",
   location: "RV Institute of Technology & Management, Bangalore, India",
+  lastUpdated: "2026-07-22",
 }

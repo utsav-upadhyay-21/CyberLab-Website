@@ -1,10 +1,10 @@
 export const homeContent = {
   hero: {
     institution: "RV Institute of Technology & Management",
-    title: "RVITM x REINFOSEC LABS",
+    title: "RVITM CYBERSECURITY LAB",
     subtitle: "Cybersecurity Education and Research Lab at RVITM",
     description:
-      "The RVITM Cybersecurity Lab is an industry-academia initiative established in collaboration with Reinfosec and AEGIS Cybersecurity Club to provide students with practical cybersecurity education, hands-on training, industry exposure, and real-world security experience.",
+      "The RVITM Cybersecurity Lab is an initiative by AEGIS Cybersecurity Club to provide students with practical cybersecurity education, hands-on training, and real-world security experience.",
     tagline: "Learn • Experiment • Secure • Innovate",
   },
 
@@ -21,7 +21,7 @@ export const homeContent = {
     description:
       "The RVITM Cybersecurity Lab is designed to provide students with a dedicated environment to explore, learn, and practice cybersecurity beyond the classroom.",
     description2:
-      "Established through collaboration between RV Institute of Technology and Management, Reinfosec, and AEGIS Cybersecurity Club, the lab combines academic learning, industry expertise, and student-driven exploration.",
+      "Established through collaboration between RV Institute of Technology and Management and AEGIS Cybersecurity Club, the lab combines academic learning and student-driven exploration.",
     description3:
       "Students gain practical exposure to cybersecurity concepts, tools, attack and defence techniques, security assessment methodologies, and emerging technologies through guided labs, workshops, projects, competitions, and industry interactions.",
   },
@@ -105,25 +105,11 @@ export const homeContent = {
       description: "Providing the academic ecosystem, infrastructure and student community.",
     },
     {
-      name: "Reinfosec",
-      role: "Industry Cybersecurity Partner",
-      description: "Providing cybersecurity expertise, industry exposure and professional guidance.",
-    },
-    {
       name: "AEGIS Cybersecurity Club",
       role: "Student Community Partner",
       description: "Supporting student engagement, peer learning, events and cybersecurity initiatives.",
     },
   ],
-
-  reinfosec: {
-    title: "Our Industry Partner",
-    name: "Reinfosec",
-    description:
-      "Reinfosec is a cybersecurity services organization providing expertise across areas including Vulnerability Assessment & Penetration Testing, Red Teaming, Security Operations Centers, Managed Compliance, and cybersecurity consulting. Reinfosec is also empanelled by CERT-In for Information Security Auditing Services.",
-    description2:
-      "Through this industry-academia collaboration, students at RVITM can gain exposure to practical cybersecurity methodologies, industry practices, security tools, and real-world perspectives.",
-  },
 
   aegis: {
     title: "Student Community Partner",

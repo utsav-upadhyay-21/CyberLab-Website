@@ -6,13 +6,14 @@ import { Menu, X } from "lucide-react"
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
+  { label: "Events", to: "/events" },
+  { label: "CTF", to: "/ctf" },
+  { label: "Current Affairs", to: "/current-affairs" },
   { label: "Newsletter", to: "/newsletter" },
   { label: "Projects", to: "/projects" },
-]
-
-const secondaryLinks = [
   { label: "Team", to: "/team" },
   { label: "FAQ", to: "/faq" },
+  { label: "Join Us", to: "/join" },
   { label: "Contact", to: "/contact" },
 ]
 
@@ -27,42 +28,9 @@ export function Navbar() {
           RVITM CyberSecurity Lab
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`font-mono text-xs tracking-widest uppercase transition-colors hover:underline underline-offset-4 decoration-2 ${
-                location.pathname === link.to
-                  ? "underline underline-offset-4"
-                  : ""
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="hidden lg:flex items-center gap-6">
-          {secondaryLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              className={`font-mono text-xs tracking-widest uppercase transition-colors hover:underline underline-offset-4 decoration-2 ${
-                location.pathname === link.to
-                  ? "underline underline-offset-4"
-                  : ""
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-2 border-2 border-foreground"
+          className="p-2 border-2 border-foreground"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -70,7 +38,7 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -78,18 +46,16 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="lg:hidden overflow-hidden border-t-2 border-foreground bg-background"
+            className="overflow-hidden border-t-2 border-foreground bg-background"
           >
             <div className="container-main py-6 flex flex-col gap-4">
-              {[...navLinks, ...secondaryLinks].map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsOpen(false)}
                   className={`font-mono text-sm tracking-widest uppercase py-2 border-b border-border-light ${
-                    location.pathname === link.to
-                      ? "font-bold"
-                      : ""
+                    location.pathname === link.to ? "font-bold" : ""
                   }`}
                 >
                   {link.label}

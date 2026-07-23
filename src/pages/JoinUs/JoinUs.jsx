@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Shield, Users, BookOpen, Award } from "lucide-react"
-import { Link } from "react-router-dom"
 import { PageHero, Container, SectionRule } from "../../components/UI/Section"
 import { Button } from "../../components/UI/Button"
 

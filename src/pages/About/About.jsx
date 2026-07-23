@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Target, Eye, Lightbulb, Users, Mail, MapPin, Building, GraduationCap, Search, Trophy, Briefcase } from "lucide-react"
+import { Target, Eye, Mail, MapPin, Building, GraduationCap, Users } from "lucide-react"
 import { PageHero, Container, SectionRule } from "../../components/UI/Section"
 import { aboutContent } from "../../data/about"
 
@@ -78,11 +78,10 @@ export function About() {
       <SectionRule />
 
       {/* Partners */}
-      <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
-        <div className="absolute inset-0 texture-vertical-light" />
-        <Container className="relative z-10">
+      <section className="py-24 md:py-32 relative texture-diagonal">
+        <Container>
           <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 opacity-60">
+            <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
               Partners
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
@@ -101,53 +100,19 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.4 }}
-                  className="border-2 border-background p-8 transition-colors hover:bg-background hover:text-foreground"
+                  className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background"
                 >
                   <Icon size={24} strokeWidth={1.5} className="mb-6" />
-                  <p className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
+                  <p className="font-mono text-xs tracking-widest uppercase mb-2 text-muted-foreground">
                     {partner.role}
                   </p>
                   <h3 className="font-display text-xl font-bold tracking-tight mb-3">
                     {partner.name}
                   </h3>
-                  <p className="text-sm opacity-80">{partner.description}</p>
+                  <p className="text-sm text-muted-foreground">{partner.description}</p>
                 </motion.div>
               )
             })}
-          </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
-      {/* Values */}
-      <section className="py-24 md:py-32 relative texture-lines">
-        <Container>
-          <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
-              Values
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              What we stand for
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {aboutContent.values.map((value, i) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="border-2 border-foreground p-6 transition-colors hover:bg-foreground hover:text-background"
-              >
-                <h3 className="font-display text-xl font-bold tracking-tight mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-muted-foreground group-hover:text-background/70">{value.description}</p>
-              </motion.div>
-            ))}
           </div>
         </Container>
       </section>

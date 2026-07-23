@@ -162,39 +162,15 @@ export function Home() {
 
       <SectionRule />
 
-      {/* Industry Partner - Reinfosec */}
+      {/* Student Community - AEGIS */}
       <section className="py-24 md:py-32 relative texture-diagonal">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="max-w-2xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-            >
-              <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
-                {homeContent.reinfosec.title}
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                {homeContent.reinfosec.name}
-              </h2>
-              <p className="text-lg mb-4">{homeContent.reinfosec.description}</p>
-              <p className="text-muted-foreground mb-8">{homeContent.reinfosec.description2}</p>
-              <a
-                href="https://reinfosec.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-xs tracking-widest uppercase flex items-center gap-2 hover:underline underline-offset-4 decoration-2"
-              >
-                Visit Reinfosec <ArrowRight size={14} strokeWidth={1.5} />
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
             >
               <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
                 {homeContent.aegis.title}
