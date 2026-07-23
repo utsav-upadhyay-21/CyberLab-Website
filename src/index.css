@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  --color-muted: #F5F5F5;
+  --color-muted-foreground: #525252;
+  --color-border-light: #E5E5E5;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #000000;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.625;
+  }
+
+  ::selection {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+  }
+
+  /* Focus visible */
+  :focus-visible {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+    border-bottom-width: 4px;
+  }
+
+  /* Noise texture overlay */
+  .texture-noise::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+  }
+
+  /* Horizontal line texture */
+  .texture-lines::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      #000 1px,
+      #000 2px
+    );
+    background-size: 100% 4px;
+    opacity: 0.015;
+  }
+
+  /* Grid texture */
+  .texture-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(#00000008 1px, transparent 1px),
+      linear-gradient(90deg, #00000008 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.015;
+  }
+
+  /* Diagonal lines texture */
+  .texture-diagonal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      #00000008 40px,
+      #00000008 42px
+    );
+    opacity: 0.01;
+  }
+
+  /* Vertical lines texture for dark bg */
+  .texture-vertical-light::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      #fff 1px,
+      #fff 2px
+    );
+    background-size: 4px 100%;
+    opacity: 0.03;
+  }
+}
+
+@layer components {
+  .section-rule {
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+  }
+
+  .section-rule-thin {
+    width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+  }
+
+  .container-main {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-main {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-main {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}
