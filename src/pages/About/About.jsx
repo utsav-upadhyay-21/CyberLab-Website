@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { Target, Eye, Lightbulb, Users, Calendar, Award, Mail, Phone, MapPin } from "lucide-react"
-import { PageHero, Container, SectionRule, SectionRuleThin } from "../../components/UI/Section"
+import { Target, Eye, Lightbulb, Users, Mail, MapPin, Building, GraduationCap, Search, Trophy, Briefcase } from "lucide-react"
+import { PageHero, Container, SectionRule } from "../../components/UI/Section"
 import { aboutContent } from "../../data/about"
 
 export function About() {
@@ -8,7 +8,7 @@ export function About() {
     <>
       <PageHero
         eyebrow="About"
-        title="About REINFOSEC LABS"
+        title="About the RVITM Cybersecurity Lab"
         description={aboutContent.subtitle}
       />
 
@@ -22,11 +22,13 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="max-w-3xl"
+            className="max-w-3xl space-y-6"
           >
             <p className="text-xl md:text-2xl leading-relaxed">
               {aboutContent.description}
             </p>
+            <p className="text-muted-foreground">{aboutContent.description2}</p>
+            <p className="text-muted-foreground">{aboutContent.description3}</p>
           </motion.div>
         </Container>
       </section>
@@ -90,17 +92,20 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {aboutContent.objectives.map((objective, i) => (
               <motion.div
-                key={i}
+                key={objective.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="border-2 border-foreground p-6 transition-colors hover:bg-foreground hover:text-background"
+                className="border-2 border-foreground p-6 transition-colors hover:bg-foreground hover:text-background group"
               >
                 <span className="font-mono text-xs tracking-widest opacity-40 block mb-4">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-lg">{objective}</p>
+                <h3 className="font-display text-lg font-bold tracking-tight mb-2">
+                  {objective.title}
+                </h3>
+                <p className="text-sm text-muted-foreground group-hover:text-background/70">{objective.description}</p>
               </motion.div>
             ))}
           </div>
@@ -109,102 +114,43 @@ export function About() {
 
       <SectionRule />
 
-      {/* Industries */}
+      {/* Partners */}
       <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
         <div className="absolute inset-0 texture-vertical-light" />
         <Container className="relative z-10">
           <div className="mb-12 md:mb-16">
             <p className="font-mono text-xs tracking-widest uppercase mb-4 opacity-60">
-              Industries
+              Partners
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              Sectors we serve
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {aboutContent.industries.map((industry, i) => (
-              <motion.div
-                key={industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-                className="border-2 border-background p-6 text-center transition-colors hover:bg-background hover:text-foreground"
-              >
-                <p className="font-mono text-sm tracking-widest uppercase">{industry}</p>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <SectionRule />
-
-      {/* Contact */}
-      <section className="py-24 md:py-32 relative texture-lines">
-        <Container>
-          <div className="mb-12 md:mb-16">
-            <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
-              Contact
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
-              Get in touch
+              Built through collaboration
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background group"
-            >
-              <Mail size={24} strokeWidth={1.5} className="mb-6" />
-              <h3 className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
-                Email
-              </h3>
-              <a
-                href={`mailto:${aboutContent.contact.email}`}
-                className="text-lg hover:underline underline-offset-4"
-              >
-                {aboutContent.contact.email}
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.4 }}
-              className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background group"
-            >
-              <Phone size={24} strokeWidth={1.5} className="mb-6" />
-              <h3 className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
-                Phone
-              </h3>
-              <a
-                href={`tel:${aboutContent.contact.phone.replace(/\s/g, "")}`}
-                className="text-lg hover:underline underline-offset-4"
-              >
-                {aboutContent.contact.phone}
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background group"
-            >
-              <MapPin size={24} strokeWidth={1.5} className="mb-6" />
-              <h3 className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
-                Address
-              </h3>
-              <p className="text-lg">{aboutContent.contact.address}</p>
-            </motion.div>
+            {aboutContent.partners.map((partner, i) => {
+              const icons = [GraduationCap, Building, Users]
+              const Icon = icons[i]
+              return (
+                <motion.div
+                  key={partner.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.4 }}
+                  className="border-2 border-background p-8 transition-colors hover:bg-background hover:text-foreground"
+                >
+                  <Icon size={24} strokeWidth={1.5} className="mb-6" />
+                  <p className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
+                    {partner.role}
+                  </p>
+                  <h3 className="font-display text-xl font-bold tracking-tight mb-3">
+                    {partner.name}
+                  </h3>
+                  <p className="text-sm opacity-80">{partner.description}</p>
+                </motion.div>
+              )
+            })}
           </div>
         </Container>
       </section>
@@ -236,9 +182,111 @@ export function About() {
                 <h3 className="font-display text-xl font-bold tracking-tight mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm opacity-80">{value.description}</p>
+                <p className="text-sm text-muted-foreground group-hover:text-background/70">{value.description}</p>
               </motion.div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <SectionRule />
+
+      {/* Lab Details */}
+      <section className="py-24 md:py-32 bg-foreground text-background relative overflow-hidden">
+        <div className="absolute inset-0 texture-vertical-light" />
+        <Container className="relative z-10">
+          <div className="mb-12 md:mb-16">
+            <p className="font-mono text-xs tracking-widest uppercase mb-4 opacity-60">
+              Lab Details
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
+              Inside the lab
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Placeholder for lab images - replace src with actual image URLs later */}
+            {[
+              { title: "Cybersecurity Workstations", placeholder: "Lab Image 1" },
+              { title: "Network Environment", placeholder: "Lab Image 2" },
+              { title: "Security Testing Tools", placeholder: "Lab Image 3" },
+              { title: "Training Infrastructure", placeholder: "Lab Image 4" },
+              { title: "CTF Environment", placeholder: "Lab Image 5" },
+              { title: "Project & Research Space", placeholder: "Lab Image 6" },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="border-2 border-background overflow-hidden group"
+              >
+                <div className="aspect-[4/3] w-full bg-background/10 flex items-center justify-center">
+                  {/* Replace this div with an img tag when you have actual images */}
+                  {/* <img src="YOUR_IMAGE_URL" alt={item.title} className="w-full h-full object-cover" /> */}
+                  <span className="font-mono text-xs tracking-widest uppercase opacity-40">
+                    {item.placeholder}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-lg font-bold tracking-tight">
+                    {item.title}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <SectionRule />
+
+      {/* Contact */}
+      <section className="py-24 md:py-32 relative texture-diagonal">
+        <Container>
+          <div className="mb-12 md:mb-16">
+            <p className="font-mono text-xs tracking-widest uppercase mb-4 text-muted-foreground">
+              Contact
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
+              Get in touch
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background"
+            >
+              <Mail size={24} strokeWidth={1.5} className="mb-6" />
+              <h3 className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
+                Email
+              </h3>
+              <a
+                href={`mailto:${aboutContent.contact.email}`}
+                className="text-lg hover:underline underline-offset-4"
+              >
+                {aboutContent.contact.email}
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.4 }}
+              className="border-2 border-foreground p-8 transition-colors hover:bg-foreground hover:text-background"
+            >
+              <MapPin size={24} strokeWidth={1.5} className="mb-6" />
+              <h3 className="font-mono text-xs tracking-widest uppercase mb-2 opacity-60">
+                Address
+              </h3>
+              <p className="text-lg">{aboutContent.contact.address}</p>
+            </motion.div>
           </div>
         </Container>
       </section>

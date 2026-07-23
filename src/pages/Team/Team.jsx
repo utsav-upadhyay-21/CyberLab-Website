@@ -8,8 +8,8 @@ export function Team() {
     <>
       <PageHero
         eyebrow="Team"
-        title="Our Team"
-        description="The people behind AEGIS"
+        title="People Behind the Initiative"
+        description="Faculty, industry mentors, and student coordinators"
       />
 
       <SectionRule />
@@ -21,6 +21,7 @@ export function Team() {
             <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-8 border-b-2 border-foreground pb-4">
               Faculty Coordinator
             </h2>
+            <p className="text-muted-foreground mb-8">Faculty responsible for academic guidance and lab coordination.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -91,24 +92,27 @@ export function Team() {
           </div>
 
           {/* Core Members */}
-          <div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-8 border-b-2 border-foreground pb-4">
-              Core Members
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {coreMembers.map((member, i) => (
-                <motion.div
-                  key={member.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05, duration: 0.4 }}
-                >
-                  <TeamCard member={member} />
-                </motion.div>
-              ))}
+          {coreMembers.length > 0 && (
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-8 border-b-2 border-foreground pb-4">
+                Core Members
+              </h2>
+              <p className="text-muted-foreground mb-8">Students supporting lab operations, activities and peer learning.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {coreMembers.map((member, i) => (
+                  <motion.div
+                    key={member.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05, duration: 0.4 }}
+                  >
+                    <TeamCard member={member} />
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </Container>
       </section>
     </>

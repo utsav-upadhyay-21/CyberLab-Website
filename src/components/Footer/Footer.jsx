@@ -6,8 +6,6 @@ const footerNav = [
     title: "Lab",
     links: [
       { label: "About", to: "/about" },
-      { label: "Events", to: "/events" },
-      { label: "Newsletter", to: "/newsletter" },
       { label: "Projects", to: "/projects" },
     ],
   },
@@ -15,15 +13,15 @@ const footerNav = [
     title: "Community",
     links: [
       { label: "Team", to: "/team" },
-      { label: "Join Us", to: "/join" },
+      { label: "Newsletter", to: "/newsletter" },
       { label: "FAQ", to: "/faq" },
-      { label: "Contact", to: "/contact" },
     ],
   },
   {
-    title: "Feedback",
+    title: "Connect",
     links: [
-      { label: "Anonymous Feedback", to: "/feedback" },
+      { label: "Contact", to: "/contact" },
+      { label: "Feedback", to: "/feedback" },
     ],
   },
 ]
@@ -35,13 +33,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <Link to="/" className="font-display text-2xl font-bold tracking-tight">
-              AEGIS
+              RVITM Cybersecurity Lab
             </Link>
             <p className="font-mono text-xs tracking-widest uppercase mt-2 opacity-60">
-              Cybersecurity Club
+              An Industry–Academia Cybersecurity Initiative
             </p>
             <p className="mt-4 text-sm opacity-60">
               {siteConfig.institution}
+            </p>
+            <p className="mt-2 text-sm opacity-40">
+              In collaboration with Reinfosec & AEGIS Cybersecurity Club
             </p>
           </div>
 

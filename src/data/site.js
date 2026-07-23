@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "AEGIS",
-  fullName: "AEGIS Cybersecurity Club",
+  name: "RVITM Cybersecurity Lab",
+  fullName: "RVITM Cybersecurity Lab",
   institution: "RV Institute of Technology & Management",
-  tagline: "Learn. Secure. Innovate.",
+  tagline: "Learn. Experiment. Secure. Innovate.",
   email: "aegis@rvitm.edu.in",
   instagram: "https://instagram.com/aegis.rvitm",
   linkedin: "https://linkedin.com/company/aegis-rvitm",

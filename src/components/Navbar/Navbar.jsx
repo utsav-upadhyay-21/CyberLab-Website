@@ -4,15 +4,14 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
+  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Events", to: "/events" },
   { label: "Newsletter", to: "/newsletter" },
   { label: "Projects", to: "/projects" },
 ]
 
-const footerLinks = [
+const secondaryLinks = [
   { label: "Team", to: "/team" },
-  { label: "Join Us", to: "/join" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
 ]
@@ -25,7 +24,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b-2 border-foreground">
       <nav className="container-main flex items-center justify-between h-16">
         <Link to="/" className="font-display text-xl font-bold tracking-tight">
-          reinfosec labs
+          RVITM Cybersecurity Lab
         </Link>
 
         {/* Desktop Nav */}
@@ -46,7 +45,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-6">
-          {footerLinks.map((link) => (
+          {secondaryLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
@@ -82,7 +81,7 @@ export function Navbar() {
             className="lg:hidden overflow-hidden border-t-2 border-foreground bg-background"
           >
             <div className="container-main py-6 flex flex-col gap-4">
-              {[...navLinks, ...footerLinks].map((link) => (
+              {[...navLinks, ...secondaryLinks].map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}

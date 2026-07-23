@@ -1,114 +1,88 @@
 export const aboutContent = {
-  title: "About Reinfosec",
-  subtitle: "Strengthening Cyber Resilience. Securing Digital Futures.",
+  title: "About the RVITM Cybersecurity Lab",
+  subtitle: "Bridging Academic Learning and Real-World Cybersecurity",
 
   description:
-    "Reinfosec is a trusted cybersecurity services provider based in Bengaluru, India, helping organizations protect their digital assets against evolving cyber threats. As a CERT-In empanelled Information Security Auditing organization, Reinfosec delivers comprehensive cybersecurity solutions across networks, cloud infrastructure, applications, critical infrastructure, and IoT environments.",
+    "The RVITM Cybersecurity Lab is designed to provide students with a dedicated environment to explore, learn, and practice cybersecurity beyond the classroom.",
+
+  description2:
+    "Established through collaboration between RV Institute of Technology and Management, Reinfosec, and AEGIS Cybersecurity Club, the lab combines academic learning, industry expertise, and student-driven exploration.",
+
+  description3:
+    "Students gain practical exposure to cybersecurity concepts, tools, attack and defence techniques, security assessment methodologies, and emerging technologies through guided labs, workshops, projects, competitions, and industry interactions.",
 
   mission:
-    "To strengthen organizations against evolving cyber threats by delivering reliable, proactive, and tailored cybersecurity services that protect critical systems, sensitive data, and digital infrastructure.",
+    "To create a practical cybersecurity learning ecosystem where students can develop industry-relevant security skills through hands-on experimentation, mentorship, projects, workshops, and real-world cybersecurity scenarios.",
 
   vision:
-    "To enable organizations to build resilient and secure digital ecosystems by combining cybersecurity expertise, industry best practices, continuous monitoring, and innovative security solutions.",
+    "To empower students with the technical knowledge, practical experience, and security mindset required to become capable cybersecurity professionals and contribute to a safer digital ecosystem.",
 
   objectives: [
-    "Identify and mitigate vulnerabilities through Vulnerability Assessment and Penetration Testing (VAPT)",
-    "Simulate real-world cyber attacks through advanced Red Teaming assessments",
-    "Provide continuous threat monitoring, detection, and incident response through Security Operations Center (SOC) services",
-    "Help organizations meet security and regulatory requirements through Managed Compliance",
-    "Provide cybersecurity Consulting & Advisory services aligned with industry best practices",
-    "Protect critical infrastructure, networks, cloud environments, applications, and IoT ecosystems",
-  ],
-
-  timeline: [
     {
-      year: "2020",
-      event: "Reinfosec established as a cybersecurity services company in Bengaluru",
+      title: "Hands-on Cybersecurity Education",
+      description: "Provide practical environments where students can apply cybersecurity concepts using real tools and technologies.",
     },
     {
-      year: "Growth",
-      event: "Expanded cybersecurity capabilities across network, cloud, application, IoT, and critical infrastructure security",
+      title: "Industry Exposure",
+      description: "Connect students with cybersecurity professionals and industry practices through Reinfosec-led sessions and mentorship.",
     },
     {
-      year: "Services",
-      event: "Built comprehensive VAPT, Red Teaming, SOC, Managed Compliance, and Consulting & Advisory capabilities",
+      title: "Security Research",
+      description: "Encourage students to explore emerging vulnerabilities, attack techniques, defensive technologies and cybersecurity research.",
     },
     {
-      year: "CERT-In",
-      event: "Empanelled by CERT-In for providing Information Security Auditing Services",
+      title: "Cybersecurity Projects",
+      description: "Enable students to develop practical security tools, applications and research projects.",
     },
     {
-      year: "Today",
-      event: "Providing tailored cybersecurity solutions to organizations across multiple industry sectors",
+      title: "CTF & Competition Training",
+      description: "Provide infrastructure and guidance for Capture the Flag challenges and cybersecurity competitions.",
+    },
+    {
+      title: "Career Readiness",
+      description: "Help students develop practical skills aligned with cybersecurity roles and industry expectations.",
     },
   ],
 
   contact: {
-    email: "info@reinfosec.com",
-    phone: "+91 97400 28096",
-    address:
-      "No. 808, A Block, Sahakar Nagar, Bengaluru, Karnataka 560092",
+    email: "aegis@rvitm.edu.in",
+    address: "RV Institute of Technology & Management, Bangalore, India",
   },
 
-  services: [
+  partners: [
     {
-      title: "VAPT",
-      description:
-        "Identify and mitigate vulnerabilities before they can be exploited through comprehensive vulnerability assessment and penetration testing.",
+      name: "RV Institute of Technology and Management",
+      role: "Academic Institution",
+      description: "Providing the academic ecosystem, infrastructure and student community.",
     },
     {
-      title: "Red Teaming",
-      description:
-        "Simulate real-world cyber attacks to evaluate and strengthen an organization's overall security posture.",
+      name: "Reinfosec",
+      role: "Industry Cybersecurity Partner",
+      description: "Providing cybersecurity expertise, industry exposure and professional guidance.",
     },
     {
-      title: "Security Operations Center",
-      description:
-        "Monitor, detect, analyze, and respond to cybersecurity threats with continuous 24/7 security monitoring.",
-    },
-    {
-      title: "Managed Compliance",
-      description:
-        "Help organizations strengthen governance, risk management, and compliance with security standards and regulatory requirements.",
-    },
-    {
-      title: "Consulting & Advisory",
-      description:
-        "Provide expert cybersecurity guidance to strengthen security posture and align security programs with industry best practices.",
+      name: "AEGIS Cybersecurity Club",
+      role: "Student Community Partner",
+      description: "Supporting student engagement, peer learning, events and cybersecurity initiatives.",
     },
   ],
 
   values: [
     {
-      title: "Protect",
-      description:
-        "Implement robust security controls to reduce cybersecurity risks and protect critical digital assets.",
+      title: "Hands-on Learning",
+      description: "Practical experience with real tools and environments over theoretical knowledge alone.",
     },
     {
-      title: "Detect",
-      description:
-        "Continuously identify and understand cybersecurity events before they impact business operations.",
+      title: "Industry Collaboration",
+      description: "Bridging the gap between academic learning and professional cybersecurity practices.",
     },
     {
-      title: "Respond",
-      description:
-        "Enable rapid response and recovery from cybersecurity incidents to minimize business impact.",
+      title: "Student-Driven Exploration",
+      description: "Empowering students to experiment, research, and develop their own security projects.",
     },
     {
-      title: "Govern",
-      description:
-        "Identify, assess, and manage security risks while maintaining strong governance and compliance.",
+      title: "Community",
+      description: "Building a collaborative cybersecurity culture through peer learning and shared knowledge.",
     },
-  ],
-
-  industries: [
-    "Retail",
-    "Automobile",
-    "Telecom",
-    "Energy",
-    "Manufacturing",
-    "Healthcare",
-    "Fintech",
-    "Technology",
   ],
 }
